@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index page</title>
+    <style>
+        h1{
+            color:red; text-shadow:0px 0px 15px black;text-align:center;
+        }
+    </style>
+</head>
+<body style="background:yellow">
+<h1>This is the Index Page</h1>
+<ul style="color:red">
+    <li style="color:green">HTML</li>
+    <li style="color:yellow">BS</li>
+    <li style="color:pink">CSS</li>
+    <li style="color:blue">JS</li>
+    <li style="color:orange">angular</li>
+    <li style="color:purple">Django</li>
+</ul>
+
+<!--{{colors}}-->
+<!--To print colors one by one -->
+<!--{% for i in colors%}
+    {{i}}<br>
+{%endfor%}-->
+<!-- to display colors in tabular format-->
+<h1>{{string}}</h1>
+<table border="1" ; width="80%" ; align="center"; style="text-align:center" ; cellspacing="0" >
+    <thead>
+        <tr>
+            <th>Colors Name</th>
+            <th>Colors</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in colors%}
+        <tr>
+            <td>{{i}}</td>
+            <td>
+                <div style="height:80px;width:100;background:{{i}}"></div>
+            </td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+</body>
+</html>
